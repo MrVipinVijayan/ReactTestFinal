@@ -45,8 +45,7 @@ const RegisterStudentComponent = () => {
 		studentData.firstName === '' ||
 		studentData.lastName === '' ||
 		studentData.dob === '' ||
-		studentData.mobile === '' ||
-		studentData.birthMark === '';
+		studentData.mobile === '';
 
 	const clearError = () => setError({ ...error, fieldName: undefined });
 
@@ -56,7 +55,6 @@ const RegisterStudentComponent = () => {
 		switch (fieldName) {
 			case studentDataFields.FIRST_NAME:
 			case studentDataFields.LAST_NAME:
-			case studentDataFields.BIRTH_MARK:
 				if (isEmpty(value)) {
 					setError({ ...error, fieldName });
 					return;
